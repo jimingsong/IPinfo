@@ -30,16 +30,15 @@
 						<ul class="layui-nav" lay-filter="">
 						  <li class="layui-nav-item layui-this"><a href="./"><i class="layui-icon">&#xe68e;</i> 首页</a></li>
 						  <li class="layui-nav-item"><a href="./dcache.php" target = "_blank"><i class="layui-icon">&#xe640;</i> 清缓存</a></li>
-						  <li class="layui-nav-item"><a href="https://github.com/helloxz/IPinfo" rel = "nofollow" target = "_blank"><i class="layui-icon">&#xe64e;</i> 源码</a></li>
-						  <li class="layui-nav-item"><a href="https://doc.xiaoz.me/#/api/ipinfo" rel = "nofollow" target = "_blank"><i class="layui-icon">&#xe857;</i> API</a></li>
-						  <li class="layui-nav-item"><a href="javascript:;" onclick = "about();"><i class="layui-icon">&#xe60b;</i> 关于</a></li>
+						  <li class="layui-nav-item"><a href="https://github.com/jimingsong/IPinfo" rel = "nofollow" target = "_blank"><i class="layui-icon">&#xe64e;</i> 源码</a></li>
+						  <!--<li class="layui-nav-item"><a href="https://doc.xiaoz.me/#/api/ipinfo" rel = "nofollow" target = "_blank"><i class="layui-icon">&#xe857;</i> API</a></li>-->
 						</ul>
 					</div>
-					<div class="right layui-hide-xs">
+					<!--<div class="right layui-hide-xs">
 						<ul class="layui-nav" lay-filter="">
 							<li class="layui-nav-item"><a href="javascript:;" onclick = "mobile();"><i class="layui-icon">&#xe63b;</i> 手机访问</a></li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -106,7 +105,7 @@
 		<div class="layui-container">
 			<div class="layui-row">
 				<div class="layui-col-lg12">
-					Copyright &copy; 2018 Powered by <a href="https://ip.awk.sh/" target = "_blank">IPinfo.</a> | Author <a href = "https://www.xiaoz.me/" target = "_blank">xiaoz.me</a>
+					Copyright &copy; 2019 Powered by <a href="#" target = "_blank">IPinfo.</a> | Author <a href = "#" target = "_blank">内部使用</a>
 				</div>
 			</div>
 		</div>

@@ -1,4 +1,6 @@
 <?php
+	//时区定义 +8
+	date_default_timezone_set("PRC"); 
 	//定义项目绝对路径，如果不清楚请先访问check.php获取
 	define("APP",dirname(__FILE__).'/');
 	//设置腾讯API
