@@ -1,6 +1,6 @@
 <?php
 	//定义项目绝对路径，如果不清楚请先访问check.php获取
-	define("APP","D:/wwwroot/IPinfo/");
+	define("APP",dirname(__FILE__).'/');
 	//设置腾讯API
 	define("LBSQQ","");
 
