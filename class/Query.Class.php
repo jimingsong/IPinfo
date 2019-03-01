@@ -30,9 +30,9 @@
 			//通过IP验证，继续执行
 
 			//获取当前时间
-			(int)$thetime = date("Ymd",time());
+			(int)$thetime = date("Y-m-d",time());
 			//7天以前
-			(int)$before7 = date('Ymd',strtotime('-7 day'));
+			(int)$before7 = date('Y-m-d',strtotime('-7 day'));
 
 			//查询数据库
 			$reinfo = $this->database->get("cache","*",[
@@ -95,7 +95,7 @@
 		function writed($ip,$address,$source){
 			//写入数据库
 			//获取当前时间
-			(int)$thetime = date("Ymd",time());
+			(int)$thetime = date("Y-m-d",time());
 			$insert = $this->database->insert("cache",[
 				"ip"		=>	$ip,
 				"address"	=>	$address,
