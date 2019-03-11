@@ -41,31 +41,25 @@
 	}
 
 	//查询接口数据
+	
+
 	$ipip = $query->caches($ip,'ipip');
-	if ( $ipip == null )
-	{
-		$ipip = $query->caches($ip,'ipip');
-	}
 	$ipip = json_decode($ipip);
 	
 
 	$taobao = $query->caches($ip,'taobao');
-	if ( $taobao == null )
-	{
-		$taobao = $query->caches($ip,'taobao');
-	}
 	$taobao = json_decode($taobao);
-
+	
+	/**
 	$geoip = $query->caches($ip,'geoip');
 	if($geoip == null){
 		$geoip = $query->caches($ip,'geoip');
 	}
 	$geoip = json_decode($geoip);
+	**/
 
 	$pure = $query->caches($ip,'qqwry');
-	if($pure == null){
-		$pure = $query->caches($ip,'qqwry');
-	}
+
 	$pure = json_decode($pure);
 
 	//腾讯数据
@@ -85,6 +79,7 @@
 <!--返回全部查询结果-->
 <div id = "allinfo">
 	<h1 style = "text-align:center;margin-bottom:40px;">
+		查询结果：
 		<code id = "allip"><?php echo $ipip->ip; ?></code> 
 		<!--如果主机不为空-->
 		<?php
@@ -93,7 +88,7 @@
 			}
 		?>
 		<!--主机不为空END-->
-		查询结果
+		
 	 </h1>
 	<table class="layui-table">
 	  <colgroup>
@@ -109,7 +104,7 @@
 	    </tr> 
 	  </thead>
 	  <tbody id = "ipinfo">
-	    <tr>
+		<tr>
 		  	<td>IPIP.NET</td>
 		  	<td id = "ipip"><?php echo $ipip->address; ?></td>
 		  	<td id = "ipip">
@@ -117,6 +112,7 @@
 			  	&nbsp;&nbsp; <a href="javascript:;" class = "layui-btn layui-btn-xs layui-btn-danger" onclick = "dcache('<?php echo $ipip->ip; ?>','<?php echo $ipip->source ?>')">清除缓存</a>
 		  	</td>
 		</tr>
+
 		<tr>
 		  	<td>淘宝</td>
 		  	<td id = "taobao"><?php echo $taobao->address; ?></td>
@@ -125,6 +121,7 @@
 			  	&nbsp;&nbsp; <a href="javascript:;" class = "layui-btn layui-btn-xs layui-btn-danger" onclick = "dcache('<?php echo $taobao->ip; ?>','<?php echo $taobao->source ?>')">清除缓存</a>
 		  	</td>
 		</tr>
+		<?php if(LBSQQ != ''){ ?>
 		<tr>
 		  	<td>GeoIP</td>
 		  	<td id = "taobao"><?php echo $geoip->address; ?></td>
@@ -133,6 +130,7 @@
 			  	&nbsp;&nbsp; <a href="javascript:;" class = "layui-btn layui-btn-xs layui-btn-danger" onclick = "dcache('<?php echo $geoip->ip; ?>','<?php echo $geoip->source ?>')">清除缓存</a>
 		  	</td>
 		</tr>
+		<?php } ?>
 		 <tr>
 		  	<td>纯真IP</td>
 		  	<td id = "qqwry"><?php echo $pure->address; ?></td>

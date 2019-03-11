@@ -14,11 +14,11 @@ $(document).keyup(function(){
 $(document).ready(function(){
 	//访问页面时加载
 	var getip = $("#getip").text();
-	$.get("https://api.ttt.sh/ip/qqwry/"+getip,function(data,status){
+	$.get("api.php?ip="+getip+"&type=json",function(data,status){
 		if(status == 'success') {
 			var myip = JSON.parse(data);
 			//$("#myip").append("<h3><i class='layui-icon'>&#xe715;</i> " + myip.country + myip.region + myip.city + myip.county + myip.isp + "</h3>");
-			$("#mylocation").text(myip.address);
+			$("#mylocation").text(myip.addr);
 		}
 	});
 	$("#btn").click(function(){

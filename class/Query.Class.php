@@ -53,6 +53,9 @@
 			else{
 				switch ( $interface )
 				{
+					case 'pconline':
+						return $this->pconline($ip);
+						break;							
 					case 'ipip':
 						return $this->ipip($ip);
 						break;		
@@ -124,6 +127,18 @@
 				$re = json_encode($re);
 				echo $re;
 			}
+		}
+		//缓存pconline数据
+		function pconline($ip){
+			//验证IP
+			$this->checkip($ip);
+			//接口地址
+			$apiurl = "https://whois.pconline.com.cn/ip.jsp?ip=".$ip;
+			$info = $this->curl($apiurl);
+			$address =  $info;
+			//写入并返回数据
+			$re = $this->writed($ip,$address,'pconline');
+			return $re;
 		}
 		//缓存ipip.net数据
 		function ipip($ip){
